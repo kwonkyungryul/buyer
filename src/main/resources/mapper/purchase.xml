@@ -4,5 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="shop.mtcoding.buyer.model.PurchaseRepository">
-   
+   <insert id="insert">
+      INSERT INTO purchase_tb(user_id, product_id, created_at) VALUES(#{userId}, #{productId}, now())
+   </insert>
 </mapper>

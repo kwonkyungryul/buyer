@@ -23,4 +23,10 @@
    <update id="updateById">
       UPDATE product_tb SET name = #{name}, price = #{price}, qty = #{qty} WHERE id = #{id}
    </update>
+
+   <update id="updateToQty">
+      UPDATE product_tb SET qty = #{qty} WHERE id = #{id}
+   </update>
+
+   
 </mapper>

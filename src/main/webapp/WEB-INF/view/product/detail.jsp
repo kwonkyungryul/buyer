@@ -10,15 +10,16 @@
         <th>재고</th>
         <th>등록일</th>
     </tr>
-    <c:forEach items="${productList}" var="product">
     <tr>
         <td>${product.id}</td>
-        <td><a href="/product/${product.id}">${product.name}</a></td>
+        <td>${product.name}</td>
         <td>${product.price}</td>
         <td>${product.qty}</td>
         <td><fmt:formatDate value="${product.createdAt}" pattern="yyyy-MM-dd"/></td>
     </tr>
-    </c:forEach>
 </table>
+<form action="/product/${product.id}/purchaseForm" method="get">
+    <input type="submit" value="구매하기">
+</form>
 
 <%@ include file="../layout/footer.jsp" %>
