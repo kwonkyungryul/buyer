@@ -16,7 +16,6 @@ public interface UserRepository { // CRUD
     public User findByID(int id);
     public int updateById(int id, String password);
     public int deleteById(int id);
-    
     // public int insert(@Param("username") String username, @Param("password") String password, @Param("email") String email);
     // public User login(String username, String password);
     // public int delete(int id);
