@@ -5,6 +5,8 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import shop.mtcoding.buyer.dto.PurchaseAllDto;
+
 @Mapper
 public interface ProductRepository {
     public int insert(@Param("name") String name, @Param("price") int price, @Param("qty") int qty);

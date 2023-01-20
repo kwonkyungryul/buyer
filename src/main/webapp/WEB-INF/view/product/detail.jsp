@@ -19,5 +19,16 @@
                 <td>${product.createdAtToString}</td>
             </tr>
         </table>
+        <c:if test="${principal != null}" >
+            <form action="/purchase/insert" method="post">
+                <input type="hidden" name="productId" id="" value="${product.id}">
+                <select name="count" id="">
+                    <c:forEach begin="1" end="${product.qty}" var="num">
+                    <option value="${num}">${num}</option>
+                    </c:forEach>
+                </select>
+                <button type="submit">구매하기</button>
+            </form>
+        </c:if>
 
 <%@ include file="../layout/footer.jsp" %>
